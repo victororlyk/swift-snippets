@@ -1,0 +1,8 @@
+id = "swift-snippets"
+name = "Swift Snippets"
+description = "Snippets for Swift and SwiftUI."
+version = "0.1.0"
+schema_version = 1
+authors = ["Viktor Orlyk"]
+repository = "https://github.com/victororlyk/swift-snippets"
+snippets = ["./snippets/swift.json"]

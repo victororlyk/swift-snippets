@@ -1,0 +1,113 @@
+{
+  "SwiftUI View": {
+    "prefix": "view",
+    "description": "SwiftUI View struct",
+    "body": [
+      "struct ${1:ContentView}: View {",
+      "\tvar body: some View {",
+      "\t\t${0:Text(\"Hello, world!\")}",
+      "\t}",
+      "}"
+    ]
+  },
+  "SwiftUI Preview": {
+    "prefix": "preview",
+    "description": "#Preview macro block",
+    "body": [
+      "#Preview {",
+      "\t${0:ContentView()}",
+      "}"
+    ]
+  },
+  "State Property": {
+    "prefix": "state",
+    "description": "@State private property",
+    "body": [
+      "@State private var ${1:name}: ${2:Type} = ${0:value}"
+    ]
+  },
+  "Binding Property": {
+    "prefix": "binding",
+    "description": "@Binding property",
+    "body": [
+      "@Binding var ${1:name}: ${0:Type}"
+    ]
+  },
+  "Button": {
+    "prefix": "button",
+    "description": "SwiftUI Button with action",
+    "body": [
+      "Button(\"${1:Title}\") {",
+      "\t${0:// action}",
+      "}"
+    ]
+  },
+  "List with ForEach": {
+    "prefix": "list",
+    "description": "SwiftUI List with ForEach over Identifiable items",
+    "body": [
+      "List {",
+      "\tForEach(${1:items}) { ${2:item} in",
+      "\t\tText(${2:item}.${3:name})$0",
+      "\t}",
+      "}"
+    ]
+  },
+  "Async Function": {
+    "prefix": "afunc",
+    "description": "async throws function",
+    "body": [
+      "func ${1:name}(${2:parameters}) async throws -> ${3:ReturnType} {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "Task": {
+    "prefix": "task",
+    "description": "Task block",
+    "body": [
+      "Task {",
+      "\t${0:await work()}",
+      "}"
+    ]
+  },
+  "Codable Struct": {
+    "prefix": "codable",
+    "description": "Codable struct",
+    "body": [
+      "struct ${1:Name}: Codable {",
+      "\tlet ${2:property}: ${3:Type}$0",
+      "}"
+    ]
+  },
+  "Guard Let": {
+    "prefix": "guardlet",
+    "description": "guard let with early exit",
+    "body": [
+      "guard let ${1:value} = ${2:optional} else {",
+      "\t${3:return}",
+      "}",
+      "$0"
+    ]
+  },
+  "If Let": {
+    "prefix": "iflet",
+    "description": "if let optional binding",
+    "body": [
+      "if let ${1:value} = ${2:optional} {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "Do Catch": {
+    "prefix": "docatch",
+    "description": "do-catch block",
+    "body": [
+      "do {",
+      "\t${1:try work()}",
+      "} catch {",
+      "\t${0:print(error)}",
+      "}"
+    ]
+  }
+}
